@@ -60,3 +60,33 @@ function checkAnswer() {
         setTimeout(questionOut,1000)
 }
 function questionOut() {lay.Animate( "FadeOut",nextQuestion,500 )}
+
+// Don t know where to insert this code
+
+//You can use a counter to count how many questions were asked and //asked correctly. To check a question was asked before you can set //the question string to null.
+//example:
+//questions=[q1;a1;a2;a3;r.a]
+//count=0
+
+function nextQuestion() {
+    do
+        a=questions[ranInt(questions.length)]
+    while(!a)
+    ask(a)
+}
+
+function ask(question){
+    //show question
+    count++
+    questions[i]=null;
+}
+
+function checkAnswer() {
+    //check right button pressed
+    if(count==20) endSession();
+    else nextQuestion();
+}
+
+//dont forget to set count 0 in endSession!
+
+//hope the code helps you ;)
